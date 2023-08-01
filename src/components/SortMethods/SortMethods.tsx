@@ -13,6 +13,7 @@ const SortMethods: FC<ISortMethodsProps> = (props) => {
         blockHeight,
         blockWidth
     } = props;
+    
     return (
         <div className="block-list">
             {array.map((value, index) => {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import { Container } from 'react-bootstrap';
 import Navbar from './components/Navbar/Navbar';
@@ -26,25 +26,25 @@ function App() {
   const secondaryColor = "red";
 
   // Function to generate a new array with unique numbers
-  function generateNewArray(): void {
-    const MAXWIDTH = 1000
-    const widhtQuantity = MAXWIDTH - arrayLength;
-    setBlockWidth(widhtQuantity * 2 / arrayLength)
-
+  const generateNewArray = useCallback((): void => {
+    const MAXWIDTH = 1000;
+    const widthQuantity = MAXWIDTH - arrayLength;
+    setBlockWidth((widthQuantity * 2) / arrayLength);
+  
     const numbersSet: Set<number> = new Set();
     const numbersArray: number[] = [];
-
+  
     while (numbersArray.length < arrayLength) {
       const randomNumber: number = Math.floor(Math.random() * (arrayLength - MIN_ARRAY_LENGTH + 1)) + MIN_ARRAY_LENGTH;
-
+  
       if (!numbersSet.has(randomNumber)) {
         numbersSet.add(randomNumber);
         numbersArray.push(randomNumber);
       }
     }
-
+  
     setArray(numbersArray);
-  }
+  }, [arrayLength, setBlockWidth, setArray]);
 
   function handleOnSlice(number: number) {
     const MAXWIDTH = 1000
@@ -202,7 +202,7 @@ function App() {
 
   useEffect(() => {
     generateNewArray()
-  }, [arrayLength])
+  }, [arrayLength, generateNewArray])
 
   return (
     <Container>

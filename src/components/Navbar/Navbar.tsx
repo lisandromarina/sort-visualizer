@@ -1,4 +1,4 @@
-import React, { Dispatch, FC, SetStateAction, useState } from 'react';
+import React, { Dispatch, FC, SetStateAction } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import "./NavbarStyles.scss"
 import "primereact/resources/primereact.min.css";
@@ -28,10 +28,6 @@ const NavbarComponent: FC<INavbarProps> = (props) => {
         setAnimationSpeed,
         animationSpeed
     } = props;
-
-    function mapRange(value: number, fromMin: number, fromMax: number, toMin: number, toMax: number): number {
-        return ((value - fromMin) * (toMax - toMin)) / (fromMax - fromMin) + toMin;
-      }
 
     return (
         <Navbar className='navbar-container'>
