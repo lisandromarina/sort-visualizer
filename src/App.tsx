@@ -145,7 +145,9 @@ function App() {
         animations[i][0] === "comparison2";
       const arrayBars = document.getElementsByClassName("block") as HTMLCollectionOf<HTMLElement>;
       if (isColorChange === true) {
-        const color =
+        //TODO
+        
+        /* const color =
           animations[i][0] === "comparison1"
             ? secondaryColor
             : primaryColor;
@@ -153,10 +155,9 @@ function App() {
         const barOneStyle = arrayBars[barOneIndex].style;
         const barTwoStyle = arrayBars[barTwoIndex].style;
         setTimeout(() => {
-          //TODO
-          /* barOneStyle.backgroundColor = color;
-          barTwoStyle.backgroundColor = color; */
-        }, i * MAX_SPEED - animationSpeed);
+          barOneStyle.backgroundColor = color;
+          barTwoStyle.backgroundColor = color;
+        }, i * MAX_SPEED - animationSpeed); */
       } else {
         const [, barIndex, newHeight] = animations[i];
         if (barIndex === -1) {
