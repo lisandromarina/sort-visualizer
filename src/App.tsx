@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
-import { Container } from 'react-bootstrap';
 import Navbar from './components/Navbar/Navbar';
 import SortMethods from './components/SortMethods';
 import { getMergeSortAnimations } from "./utils/mergeSort";
