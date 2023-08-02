@@ -2,6 +2,10 @@
 
 This repository contains JavaScript implementations and explanations of four popular sorting algorithms: Merge Sort, Quick Sort, Bubble Sort, and Insertion Sort.
 
+# Test the algorithms
+
+https://sort-visualizer-app.netlify.app/ here is the app runing in netlify to test it
+
 ## Table of Contents
 - [Merge Sort](#merge-sort)
 - [Quick Sort](#quick-sort)
