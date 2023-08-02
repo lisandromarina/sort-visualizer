@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import "./SortMethodsStyles.scss";
+import { Container } from 'react-bootstrap';
 
 export interface ISortMethodsProps {
     array: number[],
@@ -15,7 +16,7 @@ const SortMethods: FC<ISortMethodsProps> = (props) => {
     } = props;
     
     return (
-        <div className="block-list">
+        <Container className="block-list">
             {array.map((value, index) => {
 
                 return (
@@ -29,7 +30,7 @@ const SortMethods: FC<ISortMethodsProps> = (props) => {
                     ></div>
                 );
             })}
-        </div>
+        </Container>
     );
 };
 

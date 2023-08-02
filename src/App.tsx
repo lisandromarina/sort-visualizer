@@ -205,7 +205,7 @@ function App() {
   }, [arrayLength, generateNewArray])
 
   return (
-    <Container>
+    <div className='app-container'>
       <Navbar
         handleSort={handleSort}
         generateNewArray={generateNewArray}
@@ -221,7 +221,7 @@ function App() {
         blockHeight={MAX_ARRAY_LENGTH}
         blockWidth={blockWidth}
       />
-    </Container>
+    </div>
   );
 }
 

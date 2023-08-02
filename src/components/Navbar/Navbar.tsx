@@ -5,7 +5,6 @@ import "primereact/resources/primereact.min.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import { Slider } from 'primereact/slider';
 
-
 export interface INavbarProps {
     generateNewArray: () => void,
     handleSort: () => void,
@@ -14,7 +13,7 @@ export interface INavbarProps {
     handleOnSlice: (number: any) => void,
     arrayLength: number;
     setAnimationSpeed: Dispatch<SetStateAction<any>>,
-    animationSpeed:number
+    animationSpeed: number
 }
 
 const NavbarComponent: FC<INavbarProps> = (props) => {
@@ -34,6 +33,10 @@ const NavbarComponent: FC<INavbarProps> = (props) => {
             <Navbar.Text
                 onClick={generateNewArray}>
                 Create new array
+            </Navbar.Text>
+            <Navbar.Text
+                onClick={handleSort}>
+                Start!
             </Navbar.Text>
             <Navbar.Brand>
                 <p>Change array size</p>
@@ -73,7 +76,6 @@ const NavbarComponent: FC<INavbarProps> = (props) => {
                 onClick={() => setMethodSelected("insertionSort")}>
                 Insertion Sort
             </Navbar.Text>
-            <Navbar.Text onClick={handleSort}>Start!</Navbar.Text>
         </Navbar>
     );
 }
