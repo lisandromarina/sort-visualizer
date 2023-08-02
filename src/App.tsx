@@ -153,8 +153,9 @@ function App() {
         const barOneStyle = arrayBars[barOneIndex].style;
         const barTwoStyle = arrayBars[barTwoIndex].style;
         setTimeout(() => {
-          barOneStyle.backgroundColor = color;
-          barTwoStyle.backgroundColor = color;
+          //TODO
+          /* barOneStyle.backgroundColor = color;
+          barTwoStyle.backgroundColor = color; */
         }, i * MAX_SPEED - animationSpeed);
       } else {
         const [, barIndex, newHeight] = animations[i];
